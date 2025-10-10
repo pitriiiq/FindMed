@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FindMed - Solusi Digital Kesehatan Mahasiswa Kos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navigasi -->
+  <header class="navbar">
+    <div class="logo">FindMed</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#bantuan">Panggil Bantuan</a></li>
+        <li><a href="#obat">Obat & Pertolongan</a></li>
+        <li><a href="#artikel">Artikel</a></li>
+        <li><a href="#faskes">Faskes Terdekat</a></li>
+        <li><a href="#beli">Beli Obat</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section Home -->
+  <section id="home" class="section hero">
+    <div class="content">
+      <h1>Teman Digital Kesehatanmu di Kos</h1>
+      <p>FindMed membantu mahasiswa kos UNESA Ketintang mendapatkan akses cepat terhadap bantuan medis, informasi obat, dan layanan kesehatan terdekat.</p>
+      <a href="#bantuan" class="btn">Mulai Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Section Panggil Bantuan -->
+  <section id="bantuan" class="section">
+    <h2>Panggil Bantuan</h2>
+    <p>Isi form di bawah untuk memanggil relawan kesehatan terdekat.</p>
+    <form class="form">
+      <input type="text" placeholder="Nama Mahasiswa" required />
+      <input type="text" placeholder="Alamat Kos" required />
+      <textarea placeholder="Keluhan singkat..." required></textarea>
+      <button type="submit" class="btn">Kirim Permintaan</button>
+    </form>
+  </section>
+
+  <!-- Section Obat & Pertolongan -->
+  <section id="obat" class="section alt">
+    <h2>Obat & Pertolongan Pertama</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Paracetamol</h3>
+        <p>Untuk menurunkan demam dan meredakan nyeri ringan.</p>
+      </div>
+      <div class="card">
+        <h3>Oralit</h3>
+        <p>Mengatasi dehidrasi akibat diare atau panas.</p>
+      </div>
+      <div class="card">
+        <h3>Betadine</h3>
+        <p>Antiseptik untuk membersihkan luka ringan atau goresan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Artikel -->
+  <section id="artikel" class="section">
+    <h2>Artikel Kesehatan</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Tips Menjaga Pola Makan Saat Sibuk Kuliah</h3>
+        <p>Belajar cara sederhana menjaga asupan nutrisi meski jadwal padat.</p>
+      </div>
+      <div class="card">
+        <h3>Olahraga Ringan di Kamar Kos</h3>
+        <p>Latihan 10 menit yang bisa menjaga kebugaran tanpa keluar kamar.</p>
+      </div>
+      <div class="card">
+        <h3>Cara Mencegah Flu di Musim Hujan</h3>
+        <p>Langkah kecil yang bisa bantu kamu tetap fit di musim dingin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Faskes Terdekat -->
+  <section id="faskes" class="section alt">
+    <h2>Fasilitas Kesehatan Terdekat</h2>
+    <ul class="faskes-list">
+      <li><strong>Klinik UNESA Ketintang</strong> – Jl. Ketintang Baru, Surabaya</li>
+      <li><strong>Apotek Kimia Farma</strong> – Jl. Gayungsari Barat No.8</li>
+      <li><strong>RS Islam Jemursari</strong> – ±2.5 km dari Kampus Ketintang</li>
+    </ul>
+  </section>
+
+  <!-- Section Beli Obat -->
+  <section id="beli" class="section">
+    <h2>Beli Obat Online</h2>
+    <p>Pilih dan pesan obat dari apotek mitra di sekitar Ketintang.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Vitamin C 500mg</h3>
+        <p>Rp15.000</p>
+        <button class="btn">Beli Sekarang</button>
+      </div>
+      <div class="card">
+        <h3>Paracetamol 500mg</h3>
+        <p>Rp10.000</p>
+        <button class="btn">Beli Sekarang</button>
+      </div>
+      <div class="card">
+        <h3>Obat Batuk Cap Ibu & Anak</h3>
+        <p>Rp12.000</p>
+        <button class="btn">Beli Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 FindMed | Solusi Kesehatan Mahasiswa Kos UNESA</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
