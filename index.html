@@ -13,28 +13,32 @@
 <body>
   
 <header class="navbar">
-  <a href="#" class="logo">FindMed</a>
-  
-  <nav>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Beranda</a></li>
-      <li><a href="#tentang">Tentang Kami</a></li>
-      <li><a href="#bantuan">Panggil Bantuan</a></li>
-      <li><a href="#obat">Obat & Pertolongan Pertama</a></li>
-      <li><a href="#artikel">Artikel Kesehatan</a></li>
-      <li><a href="#faskes">Fasilitas Kesehatan</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <a href="#home" class="logo">FindMed</a>
 
-  <!-- Tambahin ini -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+    <!-- Checkbox untuk toggle menu -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+    <label for="nav-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#bantuan">Panggil Bantuan</a></li>
+        <li><a href="#obat">Obat & Pertolongan Pertama</a></li>
+        <li><a href="#artikel">Artikel Kesehatan</a></li>
+        <li><a href="#faskes">Fasilitas Kesehatan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
-  
+
   <!-- Hero -->
   <section id="home" class="section hero">
     <div class="content">
