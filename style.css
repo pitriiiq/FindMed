@@ -141,7 +141,7 @@ section {
 
 .hero p {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: #00;
   margin-bottom: 2rem;
   line-height: 1.8;
 }
