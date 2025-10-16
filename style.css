@@ -25,43 +25,123 @@ section {
   scroll-margin-top: 5rem;
 }
 
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.navbar .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #1990ff, #33c3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tautan navbar */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #243b53;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1990ff;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1990ff;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
 /* Tombol hamburger */
 .hamburger {
   display: none;
   font-size: 1.8rem;
-  color: hsl(var(--primary));
+  color: #1990ff;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-/* Animasi saat diklik */
 .hamburger.open {
   transform: rotate(90deg);
 }
 
-/* Responsif untuk layar kecil */
+/* 🔹 Responsif - tampilkan hamburger di layar kecil */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: relative;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
     top: 4rem;
-    right: 1rem;
+    right: 0;
     background: white;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
+    width: 250px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .hamburger {
-    display: block;
+  .nav-links li a {
+    color: #243b53;
+    width: 100%;
+  }
+
+  .nav-links li a:hover {
+    color: #1990ff;
   }
 }
+
 
 
 /* Hero Section */
