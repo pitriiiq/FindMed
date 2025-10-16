@@ -86,15 +86,6 @@ nav {
   display: none;
 }
 
-/* ===================== */
-/*     MODE MOBILE       */
-/* ===================== */
-@media (max-width: 1024px) {
-  /* Tampilkan hamburger */
-  .hamburger {
-    display: flex;
-  }
-
   /* Sembunyikan menu */
   .nav-links {
     position: fixed;
@@ -126,12 +117,6 @@ nav {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
-
-@media (min-width: 1025px) {
-  .hamburger {
-    display: flex; /
-  }
-
   .nav-links {
     position: static;
     flex-direction: row;
