@@ -71,7 +71,7 @@ section {
 .nav-links li a {
   text-decoration: none;
   color: #5a7184;
-  font-weight: 500;
+  font-weight: 300;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -270,7 +270,7 @@ section {
 /* Email Icon Style */
 .contact-icon.email {
   background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
-  box-shadow: 0 6px 15px rgba(25, 144, 255, 0.3);
+  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
 }
 
 /* WhatsApp Icon Style */
