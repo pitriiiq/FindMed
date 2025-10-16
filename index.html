@@ -12,23 +12,38 @@
 </head>
 <body>
   
-  <!-- Navigasi -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">FindMed</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Beranda</a></li>
-          <li><a href="#tentang">Tentang Kami</a></li>
-          <li><a href="#bantuan">Panggil Bantuan</a></li>
-          <li><a href="#obat">Obat & Pertolongan Pertama</a></li>
-          <li><a href="#artikel">Artikel Kesehatan</a></li>
-          <li><a href="#faskes">Fasilitas Kesehatan</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </nav>
+ <!-- Navigasi -->
+<header class="navbar">
+  <div class="container">
+    <div class="logo">FindMed</div>
+    <div class="hamburger" id="hamburger">
+      &#9776;
     </div>
-  </header>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#bantuan">Panggil Bantuan</a></li>
+        <li><a href="#obat">Obat & Pertolongan Pertama</a></li>
+        <li><a href="#artikel">Artikel Kesehatan</a></li>
+        <li><a href="#faskes">Fasilitas Kesehatan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('open');
+  });
+</script>
+
 
   <!-- Hero -->
   <section id="home" class="section hero">
