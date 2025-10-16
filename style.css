@@ -25,6 +25,114 @@ section {
   scroll-margin-top: 5rem;
 }
 
+header {
+  background-color: #ffffff;
+  color: #0f2f33;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* NAVIGATION */
+nav {
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0f2f33;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  background: #007bff;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Checkbox hilang */
+#menu-toggle {
+  display: none;
+}
+
+/* MODE MOBILE */
+@media (max-width: 1024px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    display: none;
+  }
+
+  /* Saat toggle aktif */
+  #menu-toggle:checked ~ nav .nav-links {
+    display: flex;
+  }
+
+  /* Animasi jadi X */
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* HAMBURGER SELALU TAMPIL (desktop & mobile) */
+@media (min-width: 1025px) {
+  .hamburger {
+    display: flex;
+  }
+}
 /* Hero Section */
 .hero {
   min-height: 100vh;
