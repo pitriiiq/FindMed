@@ -242,8 +242,8 @@ section {
   box-shadow: 0 12px 30px rgba(25, 144, 255, 0.15);
 }
 
+/* Icon dasar */
 .contact-icon {
-  background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
   color: white;
   width: 70px;
   height: 70px;
@@ -254,6 +254,18 @@ section {
   justify-content: center;
 }
 
+/* Email Icon */
+.contact-icon.email {
+  background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
+  box-shadow: 0 6px 15px rgba(25, 144, 255, 0.3);
+}
+
+/* WhatsApp Icon */
+.contact-icon.phone {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
+}
+
 .contact-card h3 {
   color: #243b53;
   font-size: 1.25rem;
@@ -261,7 +273,6 @@ section {
 }
 
 .contact-card a {
-  color: #1990ff;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
@@ -272,10 +283,24 @@ section {
   transition: all 0.3s ease;
 }
 
-.contact-card a:hover {
+/* Warna link Email */
+.contact-card .email + h3 + a {
+  color: #1990ff;
+}
+.contact-card .email + h3 + a:hover {
   background-color: #1990ff;
   color: #ffffff;
   border-color: #1990ff;
+}
+
+/* Warna link WhatsApp */
+.contact-card .phone + h3 + a {
+  color: #128c7e;
+}
+.contact-card .phone + h3 + a:hover {
+  background-color: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
 }
 
 /* Footer */
