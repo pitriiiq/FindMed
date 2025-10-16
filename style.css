@@ -1,25 +1,28 @@
-/* RESET DASAR */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
 }
 
 /* HEADER */
 header {
+  width: 100%;
   background-color: #ffffff;
   color: #0f2f33;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  z-index: 999;
   border-bottom: 1px solid #ddd;
 }
 
@@ -27,17 +30,22 @@ header {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #007bff;
+  color: #0f2f33;
+}
+
+.logo span {
+  color: #00aaff;
 }
 
 /* NAVIGATION */
 nav {
-  position: relative;
+  flex: 1;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 2rem;
 }
@@ -50,12 +58,12 @@ nav {
 }
 
 .nav-links li a:hover {
-  color: #007bff;
+  color: #00aaff;
 }
 
-/* HAMBURGER ICON */
+/* HAMBURGER */
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
@@ -66,7 +74,7 @@ nav {
 }
 
 .hamburger span {
-  background: #007bff;
+  background: #00aaff;
   height: 3px;
   width: 100%;
   border-radius: 2px;
@@ -78,44 +86,58 @@ nav {
   display: none;
 }
 
-/* MODE MOBILE */
+/* ===================== */
+/*     MODE MOBILE       */
+/* ===================== */
 @media (max-width: 1024px) {
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #ffffff;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    padding: 1rem 0;
-    border-top: 1px solid #ddd;
-    display: none;
-  }
-
-  /* Saat toggle aktif */
-  #menu-toggle:checked ~ nav .nav-links {
+  /* Tampilkan hamburger */
+  .hamburger {
     display: flex;
   }
 
-  /* Animasi jadi X */
+  /* Sembunyikan menu */
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    height: calc(100vh - 70px);
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    transition: right 0.3s ease-in-out;
+    border-top: 1px solid #ddd;
+  }
+
+  #menu-toggle:checked ~ nav .nav-links {
+    right: 0;
+  }
+
   #menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
-
   #menu-toggle:checked + .hamburger span:nth-child(2) {
     opacity: 0;
   }
-
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 
-/* HAMBURGER SELALU TAMPIL (desktop & mobile) */
 @media (min-width: 1025px) {
   .hamburger {
-    display: flex;
+    display: flex; /
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background: none;
+    border: none;
   }
 }
 
