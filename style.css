@@ -138,9 +138,10 @@ section {
 
 .hero p {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #0000;
+  color: #000;
   margin-bottom: 2rem;
   line-height: 1.8;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 /* Button */
