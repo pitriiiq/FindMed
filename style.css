@@ -205,53 +205,66 @@ section {
 }
 
 /* Section Kontak */
+/* ===============================
+   KONTAK SECTION
+================================= */
 #kontak {
   background-color: #f6f9fb;
-  padding: 5rem 1rem;
+  padding: 6rem 1rem;
+}
+
+#kontak .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #kontak h2 {
-  text-align: center;
   color: #243b53;
   font-size: clamp(2rem, 4vw, 2.5rem);
   margin-bottom: 1rem;
 }
 
 #kontak .subtitle {
-  text-align: center;
-  font-size: 1.1rem;
   color: #5a7184;
+  font-size: 1.1rem;
   margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
 }
 
+/* Grid Kartu Kontak */
 .contact-cards {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .contact-card {
   background-color: #ffffff;
-  border: 1px solid #dce2e8;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(25, 144, 255, 0.1);
-  padding: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(25, 144, 255, 0.1);
+  padding: 2.5rem 1.5rem;
   text-align: center;
-  width: 300px;
+  width: 320px;
   transition: all 0.3s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(25, 144, 255, 0.15);
 }
 
-/* Gaya ikon */
+/* Ikon bulat di atas */
 .contact-icon {
   width: 70px;
   height: 70px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -262,13 +275,13 @@ section {
   width: 38px;
   height: 38px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* Biar putih di atas background berwarna */
+  filter: brightness(0) invert(1);
 }
 
 /* Email Icon Style */
 .contact-icon.email {
   background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
-  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
+  box-shadow: 0 6px 15px rgba(25, 144, 255, 0.3);
 }
 
 /* WhatsApp Icon Style */
@@ -277,53 +290,55 @@ section {
   box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
 }
 
+/* Judul dan link */
 .contact-card h3 {
   color: #243b53;
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
+.contact-card a {
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #dce2e8;
+  transition: all 0.3s ease;
+}
+
 /* Email Link */
 .contact-card:nth-child(1) a {
   color: #1990ff;
   background-color: #f6f9fb;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  border: 1px solid #dce2e8;
-  transition: all 0.3s ease;
 }
+
 .contact-card:nth-child(1) a:hover {
   background-color: #1990ff;
   color: #ffffff;
-  border-color: #1990ff;
 }
 
 /* WhatsApp Link */
 .contact-card:nth-child(2) a {
   color: #128c7e;
   background-color: #f6f9fb;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  border: 1px solid #dce2e8;
-  transition: all 0.3s ease;
 }
+
 .contact-card:nth-child(2) a:hover {
   background-color: #25d366;
   color: #ffffff;
-  border-color: #25d366;
 }
 
 /* Responsif */
 @media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .contact-card {
     width: 100%;
-    max-width: 320px;
+    max-width: 350px;
   }
 }
 
