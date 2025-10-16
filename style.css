@@ -205,6 +205,7 @@ section {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
   animation: float 3s ease-in-out infinite;
 }
+
 /* Section Kontak */
 #kontak {
   background-color: #f6f9fb;
@@ -259,23 +260,23 @@ section {
   justify-content: center;
 }
 
-/* Email icon */
-.contact-icon.email {
-  background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
-  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
-}
-
-/* WhatsApp icon */
-.contact-icon.phone {
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
-}
-
 .contact-icon img {
   width: 38px;
   height: 38px;
   object-fit: contain;
   filter: brightness(0) invert(1); /* Biar putih di atas background berwarna */
+}
+
+/* Email Icon Style */
+.contact-icon.email {
+  background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
+  box-shadow: 0 6px 15px rgba(25, 144, 255, 0.3);
+}
+
+/* WhatsApp Icon Style */
+.contact-icon.phone {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
 }
 
 .contact-card h3 {
@@ -284,32 +285,37 @@ section {
   margin-bottom: 0.75rem;
 }
 
-.contact-card a {
+/* Email Link */
+.contact-card:nth-child(1) a {
+  color: #1990ff;
+  background-color: #f6f9fb;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  background-color: #f6f9fb;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   border: 1px solid #dce2e8;
   transition: all 0.3s ease;
 }
-
-/* Email Link Warna */
-.contact-card .email + h3 + a {
-  color: #1990ff;
-}
-.contact-card .email + h3 + a:hover {
+.contact-card:nth-child(1) a:hover {
   background-color: #1990ff;
   color: #ffffff;
   border-color: #1990ff;
 }
 
-/* WhatsApp Link Warna */
-.contact-card .phone + h3 + a {
+/* WhatsApp Link */
+.contact-card:nth-child(2) a {
   color: #128c7e;
+  background-color: #f6f9fb;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #dce2e8;
+  transition: all 0.3s ease;
 }
-.contact-card .phone + h3 + a:hover {
+.contact-card:nth-child(2) a:hover {
   background-color: #25d366;
   color: #ffffff;
   border-color: #25d366;
