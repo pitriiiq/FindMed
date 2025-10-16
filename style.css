@@ -25,144 +25,125 @@ section {
   scroll-margin-top: 5rem;
 }
 
-/* === NAVBAR UTAMA === */
-header {
-  width: 100%;
+/* ===== Navbar Dasar ===== */
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
-  background: #16404D;
-  color: #FBF5DD;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-}
-
-header .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* === NAVBAR WRAPPER === */
-header {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #16404D;
-  color: #FBF5DD;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* === CONTAINER === */
-header .container {
+.navbar .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 12px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* === LOGO / BRAND === */
-header h1 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #FBF5DD;
-  margin: 0;
-}
-
-header h1 a {
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
   text-decoration: none;
-  color: #FBF5DD;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* === NAVIGATION === */
+/* ===== Link Navigasi ===== */
 .nav-links {
-  display: flex;
   list-style: none;
-  gap: 24px;
+  display: flex;
+  gap: 28px;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li a {
-  color: #FBF5DD;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  color: #163842;
+  transition: color 0.2s ease;
 }
 
 .nav-links li a:hover {
-  color: #C2D9D1;
+  color: #007bff;
 }
 
-/* === HAMBURGER MENU === */
+/* ===== Hamburger Button ===== */
 .hamburger {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 18px;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 24px;
   cursor: pointer;
 }
 
 .hamburger span {
+  display: block;
   height: 3px;
-  width: 100%;
-  background: #FBF5DD;
+  background: #163842;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Animasi hamburger pas diklik */
-.hamburger.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+/* Checkbox hidden */
+.nav-toggle {
+  display: none;
 }
 
-/* === RESPONSIVE (Mobile) === */
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 60px;
-    right: -100%;
-    flex-direction: column;
-    background: #16404D;
-    width: 220px;
-    height: 100vh;
-    align-items: center;
-    justify-content: start;
-    padding-top: 50px;
-    gap: 30px;
-    transition: right 0.3s ease;
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
+/* ===== RESPONSIVE MODE ===== */
+@media (max-width: 880px) {
   .hamburger {
     display: flex;
   }
+
+  .nav-links {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 64px);
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  /* Ketika hamburger diaktifkan */
+  .nav-toggle:checked ~ nav .nav-links {
+    right: 0;
+  }
+
+  /* animasi hamburger ke X */
+  .nav-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  background: var(--gradient-hero);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Supaya konten gak ketutup navbar */
+body {
+  padding-top: 70px;
 }
 
 /* Hero Section */
