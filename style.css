@@ -139,11 +139,8 @@ section {
 .hero p {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: #000;
-  text-align: center;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
   line-height: 1.8;
+  text-align: center;
 }
 
 /* Button */
