@@ -139,9 +139,11 @@ section {
 .hero p {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: #000;
-  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   line-height: 1.8;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 /* Button */
