@@ -138,9 +138,14 @@ section {
 
 .hero p {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #000;
+  color: #000; 
   line-height: 1.8;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.4); 
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
 }
 
 /* Button */
@@ -202,33 +207,29 @@ section {
 }
 
 /* Contact Section */
-#kontak {
-  background-color: #f6f9fb;
+#kontak .contact-box {
+  background-color: #ffffff;
+  border: 1px solid #dce2e8;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 6px 20px rgba(25, 144, 255, 0.1);
 }
 
-#kontak h2 {
-  margin-bottom: 1rem;
+#kontak .contact-box p {
+  margin: 0.5rem 0;
+  color: #243b53;
+  font-size: 1.1rem;
 }
 
-#kontak > p:first-of-type {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-#kontak p {
-  font-size: 1.125rem;
-  margin: 1rem 0;
-  text-align: center;
-}
-
-#kontak a {
+#kontak .contact-box a {
   color: #1990ff;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
 }
 
-#kontak a:hover {
+#kontak .contact-box a:hover {
   color: #33c3ff;
   text-decoration: underline;
 }
