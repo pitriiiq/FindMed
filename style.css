@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 section {
   scroll-margin-top: 5rem;
 }
-
 /* === NAVBAR BASE === */
 header {
   background-color: #ffffff;
@@ -44,6 +43,14 @@ header {
   font-size: 1.8rem;
   font-weight: 800;
   color: #007bff;
+}
+
+/* === SEMBUNYIKAN CHECKBOX === */
+#menu-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* === HAMBURGER SELALU ADA === */
@@ -83,11 +90,6 @@ header {
 
 .nav-links li a:hover {
   color: #007bff;
-}
-
-/* === TOGGLE CHECKBOX === */
-#menu-toggle {
-  display: none;
 }
 
 /* === RESPONSIVE === */
