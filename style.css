@@ -139,6 +139,7 @@ section {
 .hero p {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: #000;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.4);
   display: inline-block;
   padding: 0.5rem 1rem;
