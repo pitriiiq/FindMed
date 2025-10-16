@@ -31,7 +31,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 100;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #e0e0e0;
@@ -46,6 +46,7 @@ section {
   justify-content: space-between;
   align-items: center;
   height: 4rem;
+  position: relative;
 }
 
 .logo {
@@ -61,6 +62,7 @@ section {
   display: flex;
   list-style: none;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav-links li a {
@@ -97,6 +99,8 @@ section {
   color: #1990ff;
   cursor: pointer;
   transition: transform 0.3s ease;
+  position: absolute;
+  right: 1.5rem;
 }
 
 .hamburger.open {
@@ -109,27 +113,26 @@ section {
     display: block;
   }
 
-  nav {
-    position: relative;
-  }
-
+  /* Sembunyikan link default di mobile */
   .nav-links {
     display: none;
     position: absolute;
-    top: 4rem;
-    right: 0;
-    background: white;
+    top: 4rem; /* pas di bawah navbar */
+    right: 1rem;
+    background: #fff;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     padding: 1.5rem 2rem;
-    width: 250px;
+    width: 230px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 
+  /* Munculkan menu saat aktif */
   .nav-links.active {
     display: flex;
+    animation: fadeIn 0.3s ease forwards;
   }
 
   .nav-links li a {
@@ -142,7 +145,24 @@ section {
   }
 }
 
+/* Animasi smooth */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+/* Biar konten gak ketutup navbar */
+body {
+  margin: 0;
+  padding-top: 4rem;
+  font-family: "Inter", sans-serif;
+}
 
 /* Hero Section */
 .hero {
