@@ -70,7 +70,7 @@ nav {
 
 /* === HAMBURGER === */
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -113,7 +113,7 @@ nav {
 
   /* Checkbox hack untuk toggle */
   #menu-toggle {
-    display: none;
+    display: flex;
   }
 
   #menu-toggle:checked + nav .nav-links {
