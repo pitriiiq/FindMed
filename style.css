@@ -32,14 +32,14 @@ section {
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: hsl(var(--background) / 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #dce2e8;
-  transition: all 0.3s ease;
+  border-bottom: 1px solid hsl(var(--border));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled {
-  box-shadow: 0 4px 6px rgba(36, 59, 83, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .navbar .container {
@@ -55,13 +55,12 @@ section {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
+  background: var(--gradient-hero);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Nav Links */
 .nav-links {
   display: flex;
   list-style: none;
@@ -70,14 +69,14 @@ section {
 
 .nav-links li a {
   text-decoration: none;
-  color: #5a7184;
-  font-weight: 300;
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
   transition: color 0.3s ease;
   position: relative;
 }
 
 .nav-links li a:hover {
-  color: #1990ff;
+  color: hsl(var(--primary));
 }
 
 .nav-links li a::after {
@@ -87,7 +86,7 @@ section {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #1990ff;
+  background-color: hsl(var(--primary));
   transition: width 0.3s ease;
 }
 
