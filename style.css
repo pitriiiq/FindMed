@@ -262,7 +262,7 @@ section {
 /* Email icon */
 .contact-icon.email {
   background: linear-gradient(135deg, #1990ff 0%, #33c3ff 100%);
-  box-shadow: 0 6px 15px rgba(25, 144, 255, 0.3);
+  box-shadow: 0 6px 15px rgba(18, 140, 126, 0.3);
 }
 
 /* WhatsApp icon */
