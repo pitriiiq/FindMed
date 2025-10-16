@@ -25,74 +25,44 @@ section {
   scroll-margin-top: 5rem;
 }
 
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background-color: hsl(var(--background) / 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid hsl(var(--border));
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navbar.scrolled {
-  box-shadow: var(--shadow-md);
-}
-
-.navbar .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 4rem;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  background: var(--gradient-hero);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: hsl(var(--muted-foreground));
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.nav-links li a:hover {
+/* Tombol hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
   color: hsl(var(--primary));
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: hsl(var(--primary));
-  transition: width 0.3s ease;
+/* Animasi saat diklik */
+.hamburger.open {
+  transform: rotate(90deg);
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    background: white;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
+
 
 /* Hero Section */
 .hero {
