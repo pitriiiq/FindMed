@@ -36,7 +36,8 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", sans-serif;
 }
 
 .logo {
@@ -45,20 +46,37 @@ header {
   color: #007bff;
 }
 
-/* === SEMBUNYIKAN CHECKBOX === */
+/* SEMBUNYIKAN CHECKBOX */
 #menu-toggle {
   display: none;
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
 }
 
-/* === HAMBURGER SELALU ADA === */
+/* === MENU NAV === */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #12343b;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* === HAMBURGER === */
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;
+  width: 26px;
   height: 20px;
   cursor: pointer;
   z-index: 1000;
@@ -73,31 +91,13 @@ header {
   transition: all 0.3s ease;
 }
 
-/* === NAV MENU === */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 40px;
-  align-items: center;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #12343b;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #007bff;
-}
-
-/* === RESPONSIVE === */
+/* === RESPONSIVE MODE === */
 @media (max-width: 900px) {
   header {
     padding: 15px 30px;
   }
 
+  /* MENU NGUMPET */
   .nav-links {
     position: absolute;
     top: 70px;
@@ -109,15 +109,15 @@ header {
     gap: 20px;
     padding: 25px 0;
     display: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  /* Saat hamburger diklik */
+  /* KALAU DICENTANG */
   #menu-toggle:checked + .hamburger + nav .nav-links {
     display: flex;
   }
 
-  /* Animasi hamburger ke tanda X */
+  /* ANIMASI JADI TANDA X */
   #menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -126,6 +126,14 @@ header {
   }
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* === DI DESKTOP, HAMBURGER TETAP ADA (TAPI POSISI KANAN RAPIH) === */
+@media (min-width: 901px) {
+  .hamburger {
+    position: absolute;
+    right: 40px;
   }
 }
 
