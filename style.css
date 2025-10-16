@@ -99,12 +99,6 @@ header {
   transform: rotate(-45deg) translateY(-7px);
 }
 
-/* Responsif: desktop */
-@media (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
-
   nav {
     flex: 1;
   }
