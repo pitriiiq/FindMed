@@ -73,7 +73,11 @@ nav ul li a:hover {
   opacity: 0.15; z-index: 0; 
 } 
 .hero .content { 
-  max-width: 900px; text-align: center; position: relative; z-index: 1; animation: fadeInUp 0.8s ease-out; 
+  max-width: 900px; 
+  text-align: center; 
+  position: relative; 
+  z-index: 1; 
+  animation: fadeInUp 0.8s ease-out; 
 } 
 .hero h1 { 
   font-size: clamp(2rem, 5vw, 3.5rem); 
